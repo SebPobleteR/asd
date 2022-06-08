@@ -1,5 +1,7 @@
 import os
-from telegram.ext import Updater, MessageHandler, Filters
+import telegram
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton
+from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 
 
 def process_message(update, context):
@@ -14,8 +16,7 @@ def process_message(update, context):
 
 
 if __name__ == '__main__':
-
-    updater = Updater(token=os.environ['5554568293:AAF1SP86go_7_sA9TbJCsWlTysh_Yz7fWWk'], use_context=True)
+    updater = Updater(token=os.environ['TOKEN'], use_context=True)
 
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(filters=Filters.text, callback=process_message))
