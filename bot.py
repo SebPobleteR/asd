@@ -26,6 +26,9 @@ def process_message(update, context):
             chat_id='YOUR_CHANNEL_ID',
             text=str(text).replace('#channel', '')
         )
+        
+     else:
+    print('Variable is None')
 
 
 if __name__ == '__main__':
