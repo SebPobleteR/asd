@@ -27,15 +27,11 @@ def process_message(update, context):
             text=str(text).replace('#channel', '')
         )
         
-     else:
-    print('Variable is None')
 
 
 if __name__ == '__main__':
-
+    papu = process_message('a')
     updater = Updater(token=os.environ['TOKEN'], use_context=True)
-   
-
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(filters=Filters.text, callback=process_message))
     updater.start_polling()
