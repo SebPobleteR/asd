@@ -1,6 +1,4 @@
 import os
-
-
 from telegram.ext import Updater, MessageHandler, Filters
 
 
@@ -16,6 +14,7 @@ def process_message(update, context):
 
 
 if __name__ == '__main__':
+
     updater = Updater(token=os.environ['TOKEN'], use_context=True)
 
     dp = updater.dispatcher
@@ -25,3 +24,4 @@ if __name__ == '__main__':
     print('Bot is polling')
 
     updater.idle()
+
