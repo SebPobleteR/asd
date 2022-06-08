@@ -39,6 +39,6 @@ if __name__ == '__main__':
 
     print('Bot is polling')
     
-    print(f'running at @{bot.username}')
+    
 
     updater.idle()
