@@ -1,7 +1,7 @@
 import os
-import telegram
-from telegram import InlineKeyboardMarkup, InlineKeyboardButton
-from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
+
+
+from telegram.ext import Updater, MessageHandler, Filters
 
 
 def process_message(update, context):
