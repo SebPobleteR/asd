@@ -5,7 +5,7 @@ from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 
 def process_message(update, context):
 
-    text = update.message.text
+    
 
     if str(text).__contains__('#channel'):
         context.bot.send_message(
