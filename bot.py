@@ -3,20 +3,6 @@ import telegram
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 
-def handle_start(update, context):
-
-    update.message.reply_text(
-        text=(
-            'This bot has been migrated to a new one: @ForwarderGeniusBot.'
-            '\nGo there and run /start to continue'
-        ),
-        reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(text='Go to the bot', url='https://t.me/ForwarderGeniusBot')]
-        ])
-    )
-
-
-
 def process_message(update, context):
 
     text = update.message.text
@@ -26,12 +12,17 @@ def process_message(update, context):
             chat_id='YOUR_CHANNEL_ID',
             text=str(text).replace('#channel', '')
         )
+    else:
+        print('fa')
+    
         
 
 
 if __name__ == '__main__':
-    papu = process_message('a')
+
     updater = Updater(token=os.environ['TOKEN'], use_context=True)
+   
+
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(filters=Filters.text, callback=process_message))
     updater.start_polling()
