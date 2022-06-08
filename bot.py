@@ -31,7 +31,7 @@ def process_message(update, context):
 if __name__ == '__main__':
 
     updater = Updater(token=os.environ['TOKEN'], use_context=True)
-    bot = telegram.Bot(token=token)
+   
 
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(filters=Filters.text, callback=process_message))
