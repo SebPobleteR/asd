@@ -9,7 +9,7 @@ def process_message(update, context):
     if str(text).__contains__('#channel'):
         context.bot.send_message(
             chat_id='-1001608616171',
-            text=str(text).replace('#channel', '')
+            text=text
         )
 
 
